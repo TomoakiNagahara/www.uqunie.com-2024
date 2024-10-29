@@ -134,9 +134,9 @@ function isPick($current_branch, $commit_id) : bool
 	}
 
 	//	Check the flag if year.
-	if( OP()->IsInt($flag) ){
+	if( OP()->isInt($flag) ){
 		//	And the branch is year too.
-		if( OP()->IsInt($current_branch) ){
+		if( OP()->isInt($current_branch) ){
 			return $flag <= $current_branch ? true: false;
 		}else{
 			return false;
