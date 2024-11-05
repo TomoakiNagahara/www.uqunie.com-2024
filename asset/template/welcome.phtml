@@ -107,6 +107,12 @@ if( strpos($asset_root, $app_root) === 0 ){
 		<div id="<?= OP::Config('translate')['language-area-id'] ?>"></div>
 	</section>
 <?php endif; ?>
+<?php
+OP()->WebPack()->Auto('asset:/webpack/js/Translator.js');
+OP()->WebPack()->Auto('asset:/webpack/js/Translate_Language.js');
+OP()->WebPack()->Auto('asset:/webpack/css/color.css');
+OP()->WebPack()->Auto('asset:/webpack/css/Translate_Language.css');
+?>
 
 <?php
 /**
@@ -146,7 +152,7 @@ $list = GetLinkList();
 <?php if( array_search(false, $list, true) ): ?>
 <section>
 <h2>Example</h2>
-<pre><code><?php /* pre tag designe is feces */ ?>
+<pre><code>
 cd <?= $app_root ?><br/>
 <?php
 foreach( $list as $name => $path ){
