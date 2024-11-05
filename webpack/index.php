@@ -35,8 +35,15 @@ switch( $ext ){
 	case 'js':
 	case 'css':
 		break;
+
 	default:
 		echo "/* Does not match extension directory name. `$ext` */";
+	return;
+}
+
+//	...
+if( OP()->Request('debug') ){
+	OP()->Template('debug.php');
 	return;
 }
 
