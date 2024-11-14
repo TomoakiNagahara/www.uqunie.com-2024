@@ -31,6 +31,7 @@ $usage = "Usage: php git.php asset/git/pick.php path=asset/core branch=2025 file
 
 //	Check booted.
 if(!function_exists('OP') ){
+	echo "Empty OP function --> OP is not initialized.\n";
 	echo $usage;
 	exit(__LINE__);
 }
