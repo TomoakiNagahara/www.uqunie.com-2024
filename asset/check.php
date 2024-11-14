@@ -81,6 +81,7 @@ switch( $webserver ){
 
 	case 'apache':
 	case 'nginx':
+	case 'litespeed':
 		//	Checking rewrite setting.
         switch( $entry_point = basename($_SERVER['SCRIPT_FILENAME']) ){
             case 'app.php':
