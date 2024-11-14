@@ -30,6 +30,7 @@ switch( $sapi = php_sapi_name() ){
 
     case 'fpm-fcgi':
     case 'apache2handler':
+    case 'litespeed':
         //  App root.
         if( empty($_SERVER['APP_ROOT']) ){
             $_SERVER['APP_ROOT'] = dirname($_SERVER['SCRIPT_FILENAME']).'/';
