@@ -43,7 +43,7 @@ $configs = $git->SubmoduleConfig();
 foreach( $configs as $config ){
 	//	...
 	$path   = $config['path'];
-	$branch = $config['branch'] ?? null;
+	$branch = $config['branch'] ?? _OP_APP_BRANCH_;
 
 	//	...
 	if( empty($branch) ){
