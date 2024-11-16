@@ -83,6 +83,9 @@ foreach($configs as $name => $config){
 	//	...
 	$path   = $config['path'];
 	$branch = $config['branch'];
+	if(!$branch ){
+		$branch = _OP_APP_BRANCH_;
+	}
 
 	//	...
 	chdir($git_root . $path);
