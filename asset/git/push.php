@@ -68,8 +68,14 @@ foreach( $configs as $config ){
         echo join("\n", $output);
     }
 
-    //  ...
-    $git->Push($remote, $branch, $force);
+	//	...
+	$result = '';
+	$git->Push($remote, $branch, $force, $result);
+	if( $result ){
+		if( $display ){
+			echo $result . PHP_EOL;
+		}
+	}
 }
 
 //	...
