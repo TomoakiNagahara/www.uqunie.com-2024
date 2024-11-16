@@ -54,7 +54,7 @@ foreach( $configs as $config ){
 	if( $display ){ D("Change Directory: {$meta}"); }
 
 	//	...
-	$branch = $config['branch'] ?? 'master';
+	$branch = $config['branch'] ?? _OP_APP_BRANCH_;
 
     // ...
     if(!$git->Switch($branch) ){
@@ -81,7 +81,7 @@ if(!chdir($path) ){
 if( $display ){ D("Change Directory: {$meta}"); }
 
 //	...
-$branch = OP::Request('branch') ?? 'master';
+$branch = OP::Request('branch') ?? _OP_APP_BRANCH_;
 $git->Switch($branch);
 `php ci.php`;
 $git->Push($remote, $branch, $force);
