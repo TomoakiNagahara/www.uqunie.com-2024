@@ -7,16 +7,6 @@
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright Tomoaki Nagahara All right reserved.
  */
-//	...
-$t = explode('.', PHP_VERSION);
-$v = $t[0].$t[1];
-
-/*
-//	...
-$redhat = file_exists('/etc/redhat-release') ?? false;
-$remi   = $v > 53 ? true: false;
-$repo   = $remi ? "--enablerepo=remi-php{$v}": ' ';
-*/
 
 //	...
 if( $file   = file_get_contents('/etc/os-release') ){
