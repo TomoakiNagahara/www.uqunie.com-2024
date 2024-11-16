@@ -9,7 +9,16 @@
  */
 
 //	...
-if( $file   = file_get_contents('/etc/os-release') ){
+$path = '/etc/os-release';
+
+//	...
+if(!file_exists($path) ){
+	echo "This file does not exists: `{$path}`";
+	return;
+}
+
+//	...
+if( $file = file_get_contents($path) ){
 	foreach( explode("\n", $file) as $line ){
 		list($key, $val) = explode('=', $line);
 		$info[$key] = $val;
