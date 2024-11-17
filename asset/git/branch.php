@@ -46,23 +46,8 @@ foreach( $configs as $config ){
 	$branch = $config['branch'] ?? _OP_APP_BRANCH_;
 
 	//	...
-	if( empty($branch) ){
-		continue;
-	}
-
-	//	...
 	chdir($git_root.$path);
 
 	//	...
-	$branches = $git->Branch()->List();
-
-	//	...
-	if( array_search($branch, $branches) !== false ){
-		$git->Switch($branch);
-		continue;
-	}
-
-	//	...
-	echo `git branch {$branch}`;
-	echo `git rebase origin/{$branch}`;
+	$git->Switch($branch);
 }
