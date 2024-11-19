@@ -38,16 +38,16 @@ Options +FollowSymLinks +ExecCGI -Indexes
 	# Rewrite to On from Off for rewrite is started.
 	RewriteEngine Off
 
-	# This is base directory (It is app root.)
+	# This is base directory (It is the app root.)
 	RewriteBase /
 
 	# If file does not exists, Dispatched to app.php.
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteRule . app.php [END]
 
-	# If the file exists, Dispatch only this extension.
+	# Dispatch only if matches specific extensions.
 	RewriteCond %{REQUEST_FILENAME} -f
-	RewriteCond %{REQUEST_URI} (\.php|\.html|\.phtml|\.js|\.css|\.txt|\.png)$
+	RewriteCond %{REQUEST_URI} \.(php|html|js|css|txt|png)$
 	RewriteRule . app.php [END]
 </IfModule>
 
