@@ -24,7 +24,8 @@ h2 {
 }
 
 li {
-	margin-bottom: 1em;
+	margin:  0;
+	padding: 0.2em;
 }
 
 pre {
