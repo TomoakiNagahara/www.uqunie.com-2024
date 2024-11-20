@@ -50,7 +50,7 @@
 
  You using CI/CD is very easy.
  Just type: `./cicd`
- If you need more information, please refer to the following URL: develop:/reference/core/CICD
+ If you need more information, please refer to the following URL: `develop:/reference/core/CICD`
 
 # The "NEW WORLD" is a new world!!
 
