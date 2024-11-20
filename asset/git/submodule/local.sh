@@ -52,9 +52,6 @@ git submodule sync
 # Fetch from local repository.
 git submodule foreach git fetch origin
 
-# Rebase to local/2022
-# git submodule foreach git rebase origin/2022
-
 # Delete garbage files.
 if [[ -e '.gitmodules-e' ]];then
   rm .gitmodules-e
