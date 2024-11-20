@@ -70,7 +70,13 @@
 
 ## Intuitive file structure
 
- You won't get lost.
+ You won't get lost. Old framework are as follows:
+
+ * You can't even learn where the controller is.
+ * Model inheritance would spaghetti.
+ * Templates cannot be managed.
+ * You can not switch between multiple layouts.
+ * There is no layout function in the first place.
 
 ## What does "HTML pass through" mean?
 
