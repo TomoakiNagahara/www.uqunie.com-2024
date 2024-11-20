@@ -125,7 +125,7 @@ function isPick($current_branch, $commit_id) : bool
 	$flag = strtolower($flag);
 
 	//	Check if match skip flag.
-	if( strpos($flag, $_skip) !== false ){
+	if( strpos($_skip, $flag) !== false ){
 		return false;
 	}
 
