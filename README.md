@@ -58,7 +58,7 @@
  * Intuitive file structure
  * HTML pass through
 
-## True MVC Completed
+## True MVC was completed
 
  MVC is not wrong.
  Until now, the implementation method was wrong.
