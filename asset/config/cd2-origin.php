@@ -12,7 +12,10 @@
  */
 
 //	...
-$branch = '2024';
+require_once(__DIR__.'/op.php');
+
+//	...
+$branch = _OP_APP_BRANCH_;
 
 //	...
 $config = [];
