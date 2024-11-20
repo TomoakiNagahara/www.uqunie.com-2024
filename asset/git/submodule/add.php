@@ -19,7 +19,7 @@ declare(strict_types=1);
 namespace OP;
 
 //	Usage
-$usage = 'php git.php asset/git/submodule/add.php type=unit name=unit_name branch=2024'.PHP_EOL;
+$usage = 'php git.php asset/git/submodule/add.php type=unit name=unit_name branch=' . date('Y') . PHP_EOL;
 
 //  ...
 if(!function_exists('OP') ){
