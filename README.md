@@ -103,6 +103,5 @@
 
 # 2022 to 2024
 
+ * git:/README.md
  * asset:/config/op.php  > `_OP_APP_BRANCH_`
- * asset:/config/app.php > `title`
- * asset:/git/submodule/*.sh
