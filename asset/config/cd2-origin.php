@@ -16,12 +16,13 @@ require_once(__DIR__.'/op.php');
 
 //	...
 $branch = _OP_APP_BRANCH_;
+$year   = date('Y');
 
 //	...
 $config = [];
 $config['path']      = "/www/workspace/{$branch}/origin/";
-$config['origin']    = "https://github.com/TomoakiNagahara/op-skeleton-{$branch}.git";
-$config['upstream']  = "https://github.com/onepiece-framework/op-skeleton-{$branch}.git";
+$config['origin']    = "https://github.com/TomoakiNagahara/op-skeleton-{$year}.git";
+$config['upstream']  = "https://github.com/onepiece-framework/op-skeleton-{$year}.git";
 $config['github']    = 'TomoakiNagahara'; // GitHub account (user name)
 $config['branch']    = $branch; // This is parent branch. Each submodules branch is .gitmodules.
 $config['gitmodules']=[ // Which .gitmodules file.
