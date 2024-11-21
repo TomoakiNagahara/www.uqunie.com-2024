@@ -111,6 +111,14 @@ function isPick($current_branch, $commit_id) : bool
 		$_skip = ' wip,'.$_skip;
 	}
 
+	//	...
+	static $_pick;
+	if( $_pick === null){
+		if( $_pick = OP()->Request('pick') ?? false ){
+			$_pick = strtolower($_pick);
+		}
+	}
+
 	//	Get comment by commit id.
 	$comment = trim(`git log --format=%B -n 1 {$commit_id}` ?? '');
 
@@ -123,6 +131,11 @@ function isPick($current_branch, $commit_id) : bool
 	//	Get commit flag.
 	$flag = substr($comment, 0, $pos);
 	$flag = strtolower($flag);
+
+	//	Check if pick is match.
+	if( $flag === $_pick ){
+		return true;
+	}
 
 	//	Check if match skip flag.
 	if( strpos($_skip, $flag) !== false ){
