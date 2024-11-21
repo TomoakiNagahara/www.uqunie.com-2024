@@ -3,12 +3,6 @@
  *
  * Automatically cherry pick.
  *
- * <pre>
- * ```sh
- * php git.php asset/git/pick.php path=asset/core branch=2025 file=asset/config/ skip=WIP,DEV test=1
- * ```
- * </pre>
- *
  * @created    2024-09-15
  * @version    1.0
  * @package    op-skeleton-2025
@@ -27,7 +21,7 @@ declare(strict_types=1);
 namespace OP;
 
 //	Usage
-$usage = "Usage: php git.php asset/git/pick.php path=asset/core branch=2025 file=asset/config/ skip=WIP,DEV test=1\n";
+$usage = "Usage: php git.php asset/git/pick.php path=asset/core branch=2025 file=asset/config/ skip=WIP,DEV pick= test=1\n";
 
 //	Check booted.
 if(!function_exists('OP') ){
