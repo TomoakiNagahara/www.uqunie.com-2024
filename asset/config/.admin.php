@@ -18,21 +18,29 @@ declare(strict_types=1);
  */
 namespace OP;
 
+//	...
+switch( $ip = $_SERVER['REMOTE_ADDR'] ?? null ){
+	case '':
+		break;
+	default:
+		$ip = '127.0.0.1';
+}
+
 /** Return config array.
  *
  * @return    array        $config
  */
 $config = [
-/*
+
 	//	Access with this IP address will enable developer mode.
-	Env::_ADMIN_IP_   => '153.127.64.66',
+	Env::_ADMIN_IP_   => $ip,
 
 	//	An error message will be sent to this email address.
 	Env::_ADMIN_MAIL_ => 'info@onepiece-framework.com',
 
 	//	This email address will be the from of the admin email.
 	Env::_ADMIN_FROM_ => 'noreply@onepiece-framework.com',
-*/
+
 ];
 
 //	...
