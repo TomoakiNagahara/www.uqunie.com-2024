@@ -55,7 +55,7 @@ if [ ! -f $CI_FILE ]; then
 fi
 
 # Get commit id
-CI_COMMIT_ID=`cat $CI_FILE`
+CI_COMMIT_ID=$(< "$CI_FILE")
 #echo $CI_COMMIT_ID
 
 # Get correct commit id
@@ -63,7 +63,7 @@ COMMIT_ID=`git rev-parse $BRANCH`
 #echo $COMMIT_ID
 
 #
-if [ $COMMIT_ID != $CI_COMMIT_ID ]; then
+if [ "$COMMIT_ID" != "$CI_COMMIT_ID" ]; then
   echo "ci.sh: Unmatch commit id"
   echo $COMMIT_ID branch=$BRANCH
   echo $CI_COMMIT_ID $CI_FILE
