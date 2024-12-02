@@ -16,7 +16,7 @@ $root = OP::MetaPath('asset:/config/');
 $path = "{$root}_admin.php";
 
 //	...
-$file = file_get_contents("{$root}.admin.php");
+$file = file_get_contents("{$root}admin.php");
 //	Remove only 1st multi line comment.
 $file = preg_replace('/\/\*\*[\s\S]*?\*\/\n/', '', $file, 1);
 //	Remove /* and */
