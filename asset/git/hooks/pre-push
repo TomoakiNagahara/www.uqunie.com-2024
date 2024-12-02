@@ -17,9 +17,15 @@ fi
 
 #  Search ci.sh
 if [ -e "ci.sh" ]; then
-  SOURCE="ci.sh"
+	SOURCE="ci.sh"
+	if [ $? -ne 0 ]; then
+		exit 1
+	fi
 elif [ -e ".ci.sh" ]; then
-  SOURCE=".ci.sh"
+	SOURCE=".ci.sh"
+	if [ $? -ne 0 ]; then
+		exit 1
+	fi
 else
   echo "ci.sh does not exist."
   echo `pwd`
@@ -29,6 +35,9 @@ fi
 #  Include ci.sh
 echo "execute --> $SOURCE"
 source "$SOURCE"
+if [ $? -ne 0 ]; then
+	exit 1
+fi
 
 #  Result
 if [ $? -ne 0 ]; then
