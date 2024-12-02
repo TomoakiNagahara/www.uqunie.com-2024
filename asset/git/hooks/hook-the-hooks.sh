@@ -22,6 +22,9 @@ LOCAL_HOOK_PATH="${GIT_ROOT}/.git/hooks/${HOOK_NAME}"
 if [ -e "$LOCAL_HOOK_PATH" ]; then
 	echo "Execute --> ${LOCAL_HOOK_PATH}"
 	source "$LOCAL_HOOK_PATH"
+	if [ $? -ne 0 ]; then
+		exit 1
+	fi
 fi
 
 # Global hooks
@@ -34,6 +37,9 @@ fi
 if [ -e "$GLOBAL_HOOKS_PATH" ]; then
 	echo "Execute --> ${GLOBAL_HOOKS_PATH}"
 	source "$GLOBAL_HOOKS_PATH"
+	if [ $? -ne 0 ]; then
+		exit 1
+	fi
 fi
 
 # Unset
