@@ -54,7 +54,7 @@ OP()->Env()->MIME($ext);
 $layout = OP()->Request('layout') ?? OP()->Layout()->Name();
 
 //	Set Layout default config.
-if( $path   = OP()->MetaPath("asset:/layout/{$layout}/config.php") ){
+if( file_exists($path = OP()->MetaPath("asset:/layout/{$layout}/config.php")) ){
 	$config = include( $path );
 	OP()->Config($layout, $config);
 }
