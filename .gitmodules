@@ -44,3 +44,6 @@
 [submodule "asset/unit/notfound"]
 	path = asset/unit/notfound
 	url = https://github.com/onepiece-framework/op-unit-notfound.git
+[submodule "asset/layout/uqunie"]
+	path = asset/layout/uqunie
+	url = https://github.com/TomoakiNagahara/op-layout-uqunie.com.git
