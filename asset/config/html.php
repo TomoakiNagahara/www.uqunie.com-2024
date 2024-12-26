@@ -18,8 +18,10 @@ declare(strict_types=1);
  */
 namespace OP;
 
+/* Infinity loop
 //	...
 $title = OP()->Config('html')['title'] ?? '';
+*/
 
 /** Return config array.
  *
@@ -31,8 +33,10 @@ return [
 	'charset' => 'utf-8',
 	*/
 
+	/*
 	//	This is used in the title tag.
 	'title'   => $title,
+	*/
 
 	//	This is assigned by OP()->Content().
 	'content' => null,
